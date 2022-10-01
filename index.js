@@ -12,6 +12,8 @@ app.listen(port, () => {
 })
 
 
+
+// Kết nối MongoDB
 mongoose.connect('mongodb+srv://admin:tai1892001@cluster0.wv2mc.mongodb.net/IFound_Application?retryWrites=true&w=majority', {  
   useNewUrlParser: true,
   useUnifiedTopology: true
