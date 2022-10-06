@@ -11,12 +11,3 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
-
-
-// Kết nối MongoDB
-mongoose.connect('mongodb+srv://admin:tai1892001@cluster0.wv2mc.mongodb.net/IFound_Application?retryWrites=true&w=majority', {  
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log('>>>>>>>>>> DB Connected!!!!!!'))
-.catch(err => console.log('>>>>>>>>> DB Error: ', err));
