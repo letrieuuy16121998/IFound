@@ -6,4 +6,4 @@ const productSchema = new Schema({
 
 }) 
 
-module.exports = mongoose.model('category', productSchema);
+module.exports = mongoose.model('product', productSchema);

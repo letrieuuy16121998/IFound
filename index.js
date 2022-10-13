@@ -24,16 +24,23 @@ app.use('/', loginRouter);
 app.use('/products', productRouter);
 app.use('/categories', categoryRouter);
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
-
-
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+//Kết nối DB
+mongoose.connect('mongodb+srv://iFound:<password>@cluster0.chha5kj.mongodb.net/?retryWrites=true&w=majority', {  
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => {
+  console.log('>>>>>>>>>> DB Connected!!!!!!')
+  app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+  })
+})
+.catch(err => console.log('>>>>>>>>> DB Error: ', err));
 
 // error handler
 app.use(function(err, req, res, next) {
