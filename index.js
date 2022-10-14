@@ -27,10 +27,10 @@ app.use('/categories', categoryRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
-});
+}); 
 
 //Kết nối DB
-mongoose.connect('mongodb+srv://iFound:<password>@cluster0.chha5kj.mongodb.net/?retryWrites=true&w=majority', {  
+mongoose.connect('mongodb+srv://iFound:10031998@cluster0.chha5kj.mongodb.net/?retryWrites=true&w=majority', {  
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
